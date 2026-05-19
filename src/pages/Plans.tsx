@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import { CheckCircle2, Flame, ShieldCheck, Zap } from "lucide-react";
+import {
+  CheckCircle2,
+  Flame,
+  ShieldCheck,
+  Zap,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
@@ -65,30 +70,26 @@ export default function Plans() {
       </header>
 
       <section className="w-full px-4 md:px-8 py-8 md:py-20">
-        <div className="mx-auto w-full max-w-[1600px]">
-          <div className="text-center">
+        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
+          
+          <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-4 py-2 text-xs md:text-sm">
               <Flame className="h-4 w-4" />
-              Oferta especial premium
+              Oferta premium ativa
             </div>
 
             <h1 className="mt-6 text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
-              Plano Premium
+              Plano
+              <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
+                {" "}Premium
+              </span>
             </h1>
 
-            <p className="mt-5 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
-              Tudo incluso para sua experiência premium completa.
+            <p className="mt-6 text-base md:text-xl text-white/60 leading-8">
+              Tudo que você precisa em um único plano premium.
             </p>
-          </div>
 
-          <img
-            src={plansOffer}
-            alt="Plano Premium"
-            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
-          />
-
-          <div className="mt-8 grid gap-5 lg:grid-cols-2">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10 backdrop-blur-xl">
+            <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl">
               <p className="uppercase tracking-[0.2em] text-white/40 text-sm">
                 Plano mensal
               </p>
@@ -112,41 +113,35 @@ export default function Plans() {
               </a>
             </div>
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10 backdrop-blur-xl">
-              <h3 className="text-2xl md:text-3xl font-semibold">
-                O que está incluso
-              </h3>
+            <div className="mt-8 space-y-4">
+              {benefits.map((item) => (
+                <div key={item} className="flex items-center gap-4">
+                  <CheckCircle2 className="h-5 w-5 text-cyan-300 shrink-0" />
+                  <span className="text-white/75">{item}</span>
+                </div>
+              ))}
+            </div>
 
-              <div className="mt-8 space-y-5">
-                {benefits.map((item) => (
-                  <div key={item} className="flex items-center gap-4">
-                    <CheckCircle2 className="h-5 w-5 text-cyan-300 shrink-0" />
-                    <span className="text-white/80">{item}</span>
-                  </div>
-                ))}
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-5 text-center">
+                <Zap className="mx-auto mb-4 h-7 w-7 text-cyan-300" />
+                <h4 className="font-semibold">Ativação rápida</h4>
+              </div>
+
+              <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-5 text-center">
+                <ShieldCheck className="mx-auto mb-4 h-7 w-7 text-cyan-300" />
+                <h4 className="font-semibold">Suporte humano</h4>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
-              <Zap className="mx-auto mb-4 h-8 w-8 text-cyan-300" />
-              <h4 className="text-xl font-semibold">Ativação rápida</h4>
-              <p className="mt-3 text-white/50">Comece em poucos minutos.</p>
-            </div>
-
-            <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
-              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-cyan-300" />
-              <h4 className="text-xl font-semibold">Pagamento seguro</h4>
-              <p className="mt-3 text-white/50">Processo simples e confiável.</p>
-            </div>
-
-            <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
-              <CheckCircle2 className="mx-auto mb-4 h-8 w-8 text-cyan-300" />
-              <h4 className="text-xl font-semibold">Suporte real</h4>
-              <p className="mt-3 text-white/50">Atendimento humano.</p>
-            </div>
-          </div>
+          <motion.img
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            src={plansOffer}
+            alt="Plano Premium"
+            className="w-full max-w-[340px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[620px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
+          />
         </div>
       </section>
 

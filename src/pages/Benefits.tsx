@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
 import multiDevice from "../assets/images/multi-device.webp";
-import whyLumaplay from "../assets/images/why-lumaplay.webp";
 
 import FloatingCTA from "../components/FloatingCTA";
 import LiveActivity from "../components/LiveActivity";
@@ -26,12 +25,12 @@ export default function Benefits() {
     {
       icon: Tv,
       title: "Conteúdo premium",
-      desc: "Filmes, séries e canais com experiência premium.",
+      desc: "Filmes, séries e canais premium.",
     },
     {
       icon: Trophy,
       title: "Futebol ao vivo",
-      desc: "Os principais campeonatos e transmissões ao vivo.",
+      desc: "Os principais campeonatos ao vivo.",
     },
     {
       icon: Smartphone,
@@ -46,12 +45,12 @@ export default function Benefits() {
     {
       icon: ShieldCheck,
       title: "Experiência confiável",
-      desc: "Mais organização e praticidade para assistir.",
+      desc: "Mais praticidade para assistir.",
     },
     {
       icon: Zap,
       title: "Ativação rápida",
-      desc: "Comece sua experiência em poucos minutos.",
+      desc: "Comece em poucos minutos.",
     },
   ];
 
@@ -97,65 +96,60 @@ export default function Benefits() {
       </header>
 
       <section className="w-full px-4 md:px-8 py-8 md:py-20">
-        <div className="mx-auto w-full max-w-[1600px]">
-          <div className="text-center">
+        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
+          
+          <div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
-              Por que escolher a
+              Benefícios da
               <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
                 {" "}LumaPlay
               </span>
             </h1>
 
-            <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
-              Uma experiência premium completa por apenas R$29,90/mês.
+            <p className="mt-6 text-base md:text-xl text-white/60 leading-8">
+              Tudo o que você precisa em uma experiência premium.
             </p>
-          </div>
 
-          <img
-            src={whyLumaplay}
-            alt="Por que escolher"
-            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
-          />
+            <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              {benefits.map((benefit) => {
+                const Icon = benefit.icon;
 
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {benefits.map((benefit) => {
-              const Icon = benefit.icon;
+                return (
+                  <div
+                    key={benefit.title}
+                    className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
+                  >
+                    <Icon className="h-8 w-8 text-cyan-300" />
 
-              return (
-                <div
-                  key={benefit.title}
-                  className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl"
-                >
-                  <Icon className="h-8 w-8 text-cyan-300" />
+                    <h3 className="mt-5 text-xl font-semibold">
+                      {benefit.title}
+                    </h3>
 
-                  <h3 className="mt-5 text-xl md:text-2xl font-semibold">
-                    {benefit.title}
-                  </h3>
+                    <p className="mt-3 text-white/55 leading-7">
+                      {benefit.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
 
-                  <p className="mt-4 text-white/55 leading-7">
-                    {benefit.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          <img
-            src={multiDevice}
-            alt="Multi dispositivos"
-            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
-          />
-
-          <div className="mt-8 text-center">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="glow-button inline-flex rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-10 py-5 font-semibold"
+              className="glow-button mt-8 inline-flex rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-10 py-5 font-semibold"
             >
               Assinar por R$29,90
             </a>
           </div>
+
+          <motion.img
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            src={multiDevice}
+            alt="Benefícios"
+            className="w-full max-w-[340px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[620px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
+          />
         </div>
       </section>
 

@@ -90,8 +90,9 @@ export default function Testimonials() {
       </header>
 
       <section className="w-full px-4 md:px-8 py-8 md:py-20">
-        <div className="mx-auto w-full max-w-[1600px]">
-          <div className="text-center">
+        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
+          
+          <div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
               Clientes satisfeitos com a
               <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
@@ -99,44 +100,46 @@ export default function Testimonials() {
               </span>
             </h1>
 
-            <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
+            <p className="mt-6 text-base md:text-xl text-white/60 leading-8">
               Experiência premium por apenas R$29,90/mês.
             </p>
+
+            <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              {reviews.map((review, index) => (
+                <motion.div
+                  key={review.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
+                >
+                  <div className="mb-4 flex gap-1 text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400" />
+                    ))}
+                  </div>
+
+                  <p className="leading-7 text-white/70">
+                    "{review.text}"
+                  </p>
+
+                  <div className="mt-5 border-t border-white/10 pt-4">
+                    <p className="font-medium">{review.name}</p>
+                    <p className="text-sm text-white/45">{review.city}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
-          <img
+          <motion.img
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
             src={socialProof}
             alt="Avaliações"
-            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="w-full max-w-[340px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[620px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
-
-          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {reviews.map((review, index) => (
-              <motion.div
-                key={review.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl"
-              >
-                <div className="mb-5 flex gap-1 text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400" />
-                  ))}
-                </div>
-
-                <p className="leading-8 text-white/70">
-                  "{review.text}"
-                </p>
-
-                <div className="mt-6 border-t border-white/10 pt-5">
-                  <p className="font-medium">{review.name}</p>
-                  <p className="text-sm text-white/45">{review.city}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

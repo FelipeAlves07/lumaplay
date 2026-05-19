@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
 import humanSupport from "../assets/images/human-support.webp";
-import ctaFinal from "../assets/images/cta-final.webp";
 
 import FloatingCTA from "../components/FloatingCTA";
 import LiveActivity from "../components/LiveActivity";
@@ -63,75 +62,75 @@ export default function Contact() {
       </header>
 
       <section className="w-full px-4 md:px-8 py-8 md:py-20">
-        <div className="mx-auto w-full max-w-[1600px]">
-          <div className="text-center">
+        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
+          
+          <div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
-              Fale com nossa equipe
+              Fale com nossa
+              <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
+                {" "}Equipe
+              </span>
             </h1>
 
-            <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
-              Atendimento humano rápido para assinatura, dúvidas e suporte.
+            <p className="mt-6 text-base md:text-xl text-white/60 leading-8">
+              Atendimento humano rápido para assinatura, suporte e dúvidas.
             </p>
-          </div>
 
-          <img
-            src={humanSupport}
-            alt="Suporte humano"
-            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
-          />
+            <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover-card rounded-3xl border border-white/10 bg-gradient-to-r from-[#157BFF] to-[#8E35FF] p-8"
+              >
+                <MessageCircle className="h-10 w-10" />
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover-card rounded-3xl border border-white/10 bg-gradient-to-r from-[#157BFF] to-[#8E35FF] p-8 md:p-10"
-            >
-              <MessageCircle className="h-10 w-10" />
+                <h2 className="mt-6 text-2xl font-semibold">
+                  WhatsApp
+                </h2>
 
-              <h2 className="mt-6 text-2xl md:text-3xl font-semibold">
-                WhatsApp
-              </h2>
+                <p className="mt-4 text-white/85 leading-7">
+                  Atendimento rápido para assinatura.
+                </p>
+              </a>
 
-              <p className="mt-4 text-white/85 leading-7">
-                Atendimento rápido para você assinar a LumaPlay por R$29,90.
-              </p>
-            </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover-card rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
+              >
+                <FaInstagram className="h-10 w-10 text-pink-400" />
 
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover-card rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 backdrop-blur-xl"
-            >
-              <FaInstagram className="h-10 w-10 text-pink-400" />
+                <h2 className="mt-6 text-2xl font-semibold">
+                  Instagram
+                </h2>
 
-              <h2 className="mt-6 text-2xl md:text-3xl font-semibold">
-                Instagram
-              </h2>
+                <p className="mt-4 text-white/60 leading-7">
+                  Novidades e promoções.
+                </p>
+              </a>
+            </div>
+
+            <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-xl">
+              <Headphones className="mx-auto h-10 w-10 text-cyan-300" />
+
+              <h3 className="mt-6 text-2xl font-semibold">
+                Suporte real
+              </h3>
 
               <p className="mt-4 text-white/60 leading-7">
-                Acompanhe novidades, conteúdos e promoções.
+                Atendimento humano de verdade.
               </p>
-            </a>
+            </div>
           </div>
 
-          <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 text-center backdrop-blur-xl">
-            <Headphones className="mx-auto h-10 w-10 text-cyan-300" />
-
-            <h3 className="mt-6 text-2xl md:text-3xl font-semibold">
-              Suporte real
-            </h3>
-
-            <p className="mt-4 text-white/60 max-w-2xl mx-auto leading-8">
-              Atendimento humano de verdade.
-            </p>
-          </div>
-
-          <img
-            src={ctaFinal}
-            alt="CTA"
-            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
+          <motion.img
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            src={humanSupport}
+            alt="Contato"
+            className="w-full max-w-[340px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[620px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
       </section>

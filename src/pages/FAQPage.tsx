@@ -26,15 +26,15 @@ export default function FAQPage() {
     },
     {
       q: "É difícil instalar?",
-      a: "Não. A ativação é rápida e se precisar nossa equipe ajuda.",
+      a: "Não. A ativação é rápida e nossa equipe ajuda se precisar.",
     },
     {
       q: "Tem suporte humano?",
-      a: "Sim. Atendimento real via suporte para ajudar quando precisar.",
+      a: "Sim. Atendimento real via suporte.",
     },
     {
       q: "Quanto tempo leva para ativar?",
-      a: "Normalmente poucos minutos após a confirmação.",
+      a: "Normalmente poucos minutos após confirmação.",
     },
   ];
 
@@ -80,43 +80,49 @@ export default function FAQPage() {
       </header>
 
       <section className="w-full px-4 md:px-8 py-8 md:py-20">
-        <div className="mx-auto w-full max-w-[1600px]">
-          <div className="text-center">
+        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
+          
+          <div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
-              Dúvidas frequentes
+              Dúvidas
+              <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
+                {" "}Frequentes
+              </span>
             </h1>
 
-            <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
-              Tudo o que você precisa saber antes de assinar a LumaPlay.
+            <p className="mt-6 text-base md:text-xl text-white/60 leading-8">
+              Tudo que você precisa saber antes de assinar.
             </p>
+
+            <div className="mt-8 space-y-4">
+              {faqs.map((faq) => (
+                <div
+                  key={faq.q}
+                  className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
+                >
+                  <div className="flex items-center justify-between gap-4">
+                    <h3 className="text-lg md:text-xl font-semibold">
+                      {faq.q}
+                    </h3>
+
+                    <ChevronDown className="h-5 w-5 text-cyan-300 shrink-0" />
+                  </div>
+
+                  <p className="mt-4 text-white/60 leading-7">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <img
+          <motion.img
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
             src={faqSupport}
             alt="FAQ"
-            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="w-full max-w-[340px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[620px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
-
-          <div className="mt-8 max-w-5xl mx-auto space-y-5">
-            {faqs.map((faq) => (
-              <div
-                key={faq.q}
-                className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl"
-              >
-                <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-lg md:text-2xl font-semibold">
-                    {faq.q}
-                  </h3>
-
-                  <ChevronDown className="h-5 w-5 text-cyan-300 shrink-0" />
-                </div>
-
-                <p className="mt-5 text-white/60 leading-8">
-                  {faq.a}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
