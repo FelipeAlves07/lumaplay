@@ -9,14 +9,14 @@ import LiveActivity from "../components/LiveActivity";
 import MobileMenu from "../components/MobileMenu";
 
 const WHATSAPP_URL =
-  "https://wa.me/5531975672291?text=Olá! Quero assinar a LumaPlay.";
+  "https://wa.me/5531975672291?text=Olá! Quero assinar a LumaPlay agora.";
 
 export default function Plans() {
   const benefits = [
-    "Filmes e séries premium",
+    "Filmes e séries premium ilimitados",
     "Canais ao vivo",
     "Futebol ao vivo",
-    "Smart TV / celular / tablet",
+    "Smart TV / celular / tablet / notebook",
     "Suporte humano rápido",
     "Ativação simplificada",
   ];
@@ -62,12 +62,12 @@ export default function Plans() {
         </div>
       </header>
 
-      <section className="w-full px-3 md:px-8 py-8 md:py-20">
+      <section className="w-full px-4 md:px-8 py-8 md:py-20">
         <div className="mx-auto w-full max-w-[1600px]">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-4 py-2 text-xs md:text-sm">
               <Flame className="h-4 w-4" />
-              Oferta especial de lançamento
+              Oferta especial premium
             </div>
 
             <h1 className="mt-6 text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
@@ -75,35 +75,29 @@ export default function Plans() {
             </h1>
 
             <p className="mt-5 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
-              Tudo o que você precisa para entretenimento premium em um só lugar.
+              Tudo incluso para sua experiência premium completa.
             </p>
           </div>
 
           <img
             src={plansOffer}
-            alt="Plano LumaPlay"
-            className="
-              mt-8
-              w-full
-              rounded-3xl
-              border border-white/10
-              shadow-2xl
-            "
+            alt="Plano Premium"
+            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 lg:grid-cols-2">
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10 backdrop-blur-xl">
               <p className="uppercase tracking-[0.2em] text-white/40 text-sm">
-                Mensal
+                Plano mensal
               </p>
 
               <div className="mt-5 flex items-end gap-3 flex-wrap">
-                <h2 className="text-6xl md:text-8xl font-semibold">R$25</h2>
+                <h2 className="text-6xl md:text-8xl font-semibold">R$29,90</h2>
                 <span className="text-white/45 pb-3">/mês</span>
               </div>
 
               <p className="mt-6 text-white/60 leading-8">
-                Sem complicação, ativação rápida e suporte real.
+                Sem fidelidade, ativação rápida e suporte humano.
               </p>
 
               <a
@@ -120,7 +114,7 @@ export default function Plans() {
                   font-semibold
                 "
               >
-                Quero assinar agora
+                Assinar agora
               </a>
             </div>
 
@@ -144,19 +138,25 @@ export default function Plans() {
             <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
               <Zap className="mx-auto mb-4 h-8 w-8 text-cyan-300" />
               <h4 className="text-xl font-semibold">Ativação rápida</h4>
-              <p className="mt-3 text-white/50">Comece em poucos minutos.</p>
+              <p className="mt-3 text-white/50">
+                Comece em poucos minutos.
+              </p>
             </div>
 
             <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
               <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-cyan-300" />
               <h4 className="text-xl font-semibold">Pagamento seguro</h4>
-              <p className="mt-3 text-white/50">Processo simples e confiável.</p>
+              <p className="mt-3 text-white/50">
+                Processo simples e confiável.
+              </p>
             </div>
 
             <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
               <CheckCircle2 className="mx-auto mb-4 h-8 w-8 text-cyan-300" />
               <h4 className="text-xl font-semibold">Suporte real</h4>
-              <p className="mt-3 text-white/50">Atendimento humano.</p>
+              <p className="mt-3 text-white/50">
+                Atendimento humano.
+              </p>
             </div>
           </div>
         </div>

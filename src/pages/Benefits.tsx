@@ -18,16 +18,40 @@ import LiveActivity from "../components/LiveActivity";
 import MobileMenu from "../components/MobileMenu";
 
 const WHATSAPP_URL =
-  "https://wa.me/5531975672291?text=Olá! Quero conhecer a LumaPlay.";
+  "https://wa.me/5531975672291?text=Olá! Quero assinar a LumaPlay.";
 
 export default function Benefits() {
   const benefits = [
-    { icon: Tv, title: "Conteúdo completo", desc: "Filmes, séries e canais premium." },
-    { icon: Trophy, title: "Futebol ao vivo", desc: "Os principais campeonatos ao vivo." },
-    { icon: Smartphone, title: "Multi dispositivos", desc: "Smart TV, celular, tablet e mais." },
-    { icon: Headphones, title: "Suporte humano", desc: "Atendimento rápido e real." },
-    { icon: ShieldCheck, title: "Confiabilidade", desc: "Experiência estável e organizada." },
-    { icon: Zap, title: "Ativação rápida", desc: "Comece em poucos minutos." },
+    {
+      icon: Tv,
+      title: "Conteúdo premium",
+      desc: "Filmes, séries e canais com experiência premium.",
+    },
+    {
+      icon: Trophy,
+      title: "Futebol ao vivo",
+      desc: "Os principais campeonatos e transmissões ao vivo.",
+    },
+    {
+      icon: Smartphone,
+      title: "Multi dispositivos",
+      desc: "Smart TV, celular, tablet e notebook.",
+    },
+    {
+      icon: Headphones,
+      title: "Suporte humano",
+      desc: "Atendimento rápido quando precisar.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Experiência confiável",
+      desc: "Mais organização e praticidade para assistir.",
+    },
+    {
+      icon: Zap,
+      title: "Ativação rápida",
+      desc: "Comece sua experiência em poucos minutos.",
+    },
   ];
 
   return (
@@ -43,8 +67,8 @@ export default function Benefits() {
       <LiveActivity />
       <FloatingCTA />
 
-      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/80 backdrop-blur-2xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-5 py-4">
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/90 backdrop-blur-2xl">
+        <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 md:px-8 py-4">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={logoIcon}
@@ -53,12 +77,8 @@ export default function Benefits() {
             />
 
             <div>
-              <p className="text-sm font-semibold tracking-[0.24em]">
-                LUMAPLAY
-              </p>
-              <p className="text-[10px] uppercase text-white/35">
-                by Luma Labs
-              </p>
+              <p className="text-sm font-semibold tracking-[0.24em]">LUMAPLAY</p>
+              <p className="text-[10px] uppercase text-white/35">BY LUMALABS</p>
             </div>
           </Link>
 
@@ -75,74 +95,72 @@ export default function Benefits() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-7xl px-4 md:px-5 py-10 md:py-20">
-        <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
-            Por que escolher a
-            <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
-              {" "}LumaPlay?
-            </span>
-          </h1>
+      <section className="w-full px-4 md:px-8 py-8 md:py-20">
+        <div className="mx-auto w-full max-w-[1600px]">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
+              Por que escolher a
+              <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
+                {" "}LumaPlay
+              </span>
+            </h1>
 
-          <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
-            Uma experiência premium pensada para quem quer praticidade,
-            estabilidade e atendimento de verdade.
-          </p>
-        </div>
+            <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
+              Uma experiência premium completa por apenas R$29,90/mês.
+            </p>
+          </div>
 
-        <motion.img
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          src={whyLumaplay}
-          alt="Benefícios"
-          className="mt-10 w-full rounded-3xl border border-white/10 shadow-2xl"
-        />
+          <img
+            src={whyLumaplay}
+            alt="Por que escolher"
+            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+          />
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {benefits.map((benefit) => {
-            const Icon = benefit.icon;
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {benefits.map((benefit) => {
+              const Icon = benefit.icon;
 
-            return (
-              <div
-                key={benefit.title}
-                className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl"
-              >
-                <Icon className="h-8 w-8 text-cyan-300" />
+              return (
+                <div
+                  key={benefit.title}
+                  className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl"
+                >
+                  <Icon className="h-8 w-8 text-cyan-300" />
 
-                <h3 className="mt-5 text-xl md:text-2xl font-semibold">
-                  {benefit.title}
-                </h3>
+                  <h3 className="mt-5 text-xl md:text-2xl font-semibold">
+                    {benefit.title}
+                  </h3>
 
-                <p className="mt-4 text-white/55 leading-7">
-                  {benefit.desc}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+                  <p className="mt-4 text-white/55 leading-7">
+                    {benefit.desc}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
 
-        <motion.img
-          whileHover={{ scale: 1.01 }}
-          src={multiDevice}
-          alt="Multi device"
-          className="mt-10 w-full rounded-3xl border border-white/10 shadow-2xl"
-        />
+          <img
+            src={multiDevice}
+            alt="Multi dispositivos"
+            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+          />
 
-        <div className="mt-10 text-center">
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            className="
-              glow-button
-              inline-flex
-              rounded-2xl
-              bg-gradient-to-r from-[#157BFF] to-[#8E35FF]
-              px-10 py-5
-              font-semibold
-            "
-          >
-            Quero conhecer a LumaPlay
-          </a>
+          <div className="mt-8 text-center">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              className="
+                glow-button
+                inline-flex
+                rounded-2xl
+                bg-gradient-to-r from-[#157BFF] to-[#8E35FF]
+                px-10 py-5
+                font-semibold
+              "
+            >
+              Assinar por R$29,90
+            </a>
+          </div>
         </div>
       </section>
     </main>

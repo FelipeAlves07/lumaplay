@@ -14,32 +14,32 @@ export default function Testimonials() {
     {
       name: "Carlos M.",
       city: "Belo Horizonte",
-      text: "Instalação rápida, atendimento excelente e tudo funcionando perfeitamente.",
+      text: "Ativação muito rápida e atendimento excelente.",
     },
     {
       name: "Fernanda R.",
-      city: "Contagem",
-      text: "Muito mais organizado do que eu imaginava.",
+      city: "São Paulo",
+      text: "A qualidade surpreendeu, uso todos os dias.",
     },
     {
       name: "Juliano P.",
-      city: "Betim",
-      text: "Uso na Smart TV e no celular sem dor de cabeça.",
+      city: "Curitiba",
+      text: "Funcionando muito bem na Smart TV e no celular.",
     },
     {
       name: "Patrícia A.",
-      city: "Nova Lima",
-      text: "Assinei e já estava usando em minutos.",
+      city: "Rio de Janeiro",
+      text: "Vale muito a pena pelo valor de R$29,90.",
     },
     {
       name: "Rafael S.",
-      city: "Uberlândia",
-      text: "Suporte realmente responde.",
+      city: "Brasília",
+      text: "Suporte responde rápido e resolve de verdade.",
     },
     {
       name: "Marina C.",
-      city: "Juiz de Fora",
-      text: "Experiência premium de verdade.",
+      city: "Recife",
+      text: "Muito mais premium do que eu esperava.",
     },
   ];
 
@@ -56,8 +56,8 @@ export default function Testimonials() {
       <LiveActivity />
       <FloatingCTA />
 
-      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/80 backdrop-blur-2xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-5 py-4">
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/90 backdrop-blur-2xl">
+        <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 md:px-8 py-4">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={logoIcon}
@@ -66,12 +66,8 @@ export default function Testimonials() {
             />
 
             <div>
-              <p className="text-sm font-semibold tracking-[0.24em]">
-                LUMAPLAY
-              </p>
-              <p className="text-[10px] uppercase text-white/35">
-                by Luma Labs
-              </p>
+              <p className="text-sm font-semibold tracking-[0.24em]">LUMAPLAY</p>
+              <p className="text-[10px] uppercase text-white/35">BY LUMALABS</p>
             </div>
           </Link>
 
@@ -88,64 +84,54 @@ export default function Testimonials() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-7xl px-4 md:px-5 py-10 md:py-20">
-        <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
-            Clientes satisfeitos com a
-            <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
-              {" "}LumaPlay
-            </span>
-          </h1>
+      <section className="w-full px-4 md:px-8 py-8 md:py-20">
+        <div className="mx-auto w-full max-w-[1600px]">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
+              Clientes satisfeitos com a
+              <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
+                {" "}LumaPlay
+              </span>
+            </h1>
 
-          <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
-            Experiências reais de clientes aproveitando a plataforma.
-          </p>
-        </div>
+            <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
+              Experiência premium por apenas R$29,90/mês.
+            </p>
+          </div>
 
-        <motion.img
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          src={socialProof}
-          alt="Avaliações"
-          className="mt-10 w-full rounded-3xl border border-white/10 shadow-2xl"
-        />
+          <img
+            src={socialProof}
+            alt="Avaliações"
+            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+          />
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((review, index) => (
-            <motion.div
-              key={review.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="
-                hover-card
-                rounded-3xl
-                border border-white/10
-                bg-white/5
-                p-6 md:p-8
-                backdrop-blur-xl
-              "
-            >
-              <div className="mb-5 flex gap-1 text-yellow-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-yellow-400"
-                  />
-                ))}
-              </div>
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {reviews.map((review, index) => (
+              <motion.div
+                key={review.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl"
+              >
+                <div className="mb-5 flex gap-1 text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-yellow-400" />
+                  ))}
+                </div>
 
-              <p className="leading-8 text-white/70">
-                "{review.text}"
-              </p>
+                <p className="leading-8 text-white/70">
+                  "{review.text}"
+                </p>
 
-              <div className="mt-6 border-t border-white/10 pt-5">
-                <p className="font-medium">{review.name}</p>
-                <p className="text-sm text-white/45">{review.city}</p>
-              </div>
-            </motion.div>
-          ))}
+                <div className="mt-6 border-t border-white/10 pt-5">
+                  <p className="font-medium">{review.name}</p>
+                  <p className="text-sm text-white/45">{review.city}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </main>
