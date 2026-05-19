@@ -1,128 +1,95 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  font-family: Inter, Arial, sans-serif;
-  color-scheme: dark;
+html {
   scroll-behavior: smooth;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-*,
-button,
-a {
-  cursor: pointer;
-}
-
-html,
-body,
-#root {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  width: 100%;
-  background: #04050a;
-}
-
 body {
-  overflow-x: hidden;
+  margin: 0;
+  background: #04050a;
+  color: white;
+  font-family: Inter, system-ui, sans-serif;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+/* REDUÇÃO GLOBAL */
+
+h1 {
+  font-size: clamp(2.2rem, 4vw, 5rem) !important;
+  line-height: 1.05 !important;
 }
 
-.floating-cta {
-  animation: pulseGlow 2.2s infinite;
+h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2.5rem) !important;
+  line-height: 1.15 !important;
 }
 
-@keyframes pulseGlow {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 20px rgba(21, 123, 255, 0.2);
-  }
+h3 {
+  font-size: clamp(1.15rem, 1.8vw, 1.7rem) !important;
+}
 
-  50% {
-    transform: scale(1.04);
-    box-shadow: 0 0 40px rgba(142, 53, 255, 0.35);
-  }
+p {
+  line-height: 1.6;
+}
 
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 20px rgba(21, 123, 255, 0.2);
-  }
+section {
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
 }
 
 .hover-card {
-  transition: all 0.35s ease;
+  transition: all 0.25s ease;
 }
 
 .hover-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 45px rgba(0, 183, 255, 0.12);
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .glow-button {
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  box-shadow:
+    0 0 20px rgba(21, 123, 255, 0.25),
+    0 0 40px rgba(142, 53, 255, 0.15);
 }
 
 .glow-button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 45px rgba(142, 53, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 30px rgba(21, 123, 255, 0.35),
+    0 0 50px rgba(142, 53, 255, 0.22);
 }
 
-nav a {
-  position: relative;
-  transition: all 0.3s ease;
+/* DESKTOP REDUÇÃO GERAL */
+
+@media (min-width: 1024px) {
+  .hover-card {
+    padding: 1.25rem !important;
+  }
+
+  .glow-button {
+    padding: 0.9rem 1.8rem !important;
+  }
+
+  nav a {
+    font-size: 0.92rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(to right, #22c8ff, #8e35ff);
-  transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #070b14;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(#157bff, #8e35ff);
-  border-radius: 999px;
-}
+/* MOBILE */
 
 @media (max-width: 768px) {
-  .floating-cta {
-    bottom: 14px !important;
-    right: 14px !important;
-    padding: 12px 18px !important;
-    font-size: 13px !important;
-    z-index: 9999;
+  section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 
-  .hover-card:hover {
-    transform: none;
-    box-shadow: none;
-  }
-
-  nav a::after {
-    display: none;
+  .hover-card {
+    padding: 1.2rem !important;
   }
 }
