@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Mail, ShieldCheck } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 
 const WHATSAPP_URL =
@@ -9,46 +9,65 @@ const INSTAGRAM_URL = "https://instagram.com/lumaplaytv";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black/30 mt-16">
-      <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-10">
-        <div className="grid gap-8 md:grid-cols-3">
+    <footer className="border-t border-white/10 bg-[#05070d] mt-14">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-10 py-10">
+        <div className="grid gap-10 md:grid-cols-4">
+          
           <div>
-            <h3 className="text-2xl font-semibold text-white">LUMAPLAY</h3>
+            <h3 className="text-3xl font-semibold text-white">LUMAPLAY</h3>
 
-            <p className="mt-4 text-white/50 leading-7">
-              Streaming premium com suporte humano e ativação rápida.
+            <p className="mt-4 text-white/55 leading-7 text-sm">
+              Streaming premium com filmes, séries, canais ao vivo, futebol,
+              suporte humano e ativação rápida.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-white">Navegação</h4>
+            <h4 className="text-white font-semibold mb-4">Navegação</h4>
 
-            <div className="flex flex-col gap-3 text-white/60">
+            <div className="flex flex-col gap-3 text-white/60 text-sm">
               <Link to="/conheca">Conheça</Link>
               <Link to="/planos">Planos</Link>
               <Link to="/beneficios">Benefícios</Link>
               <Link to="/avaliacoes">Avaliações</Link>
-              <Link to="/faq">FAQ</Link>
-              <Link to="/contato">Contato</Link>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-white">Contato</h4>
+            <h4 className="text-white font-semibold mb-4">Suporte</h4>
 
-            <div className="flex gap-5">
-              <a href={WHATSAPP_URL} target="_blank">
-                <MessageCircle className="h-7 w-7 text-green-400" />
+            <div className="flex flex-col gap-3 text-white/60 text-sm">
+              <Link to="/faq">FAQ</Link>
+              <Link to="/contato">Contato</Link>
+
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="h-4 w-4 text-cyan-300" />
+                <span>Atendimento humano</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-cyan-300" />
+                <span>Suporte rápido</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">Contato</h4>
+
+            <div className="flex gap-4">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-6 w-6 text-green-400" />
               </a>
 
-              <a href={INSTAGRAM_URL} target="_blank">
-                <FaInstagram className="h-7 w-7 text-pink-400" />
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="h-6 w-6 text-pink-400" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-center text-white/40 text-sm">
+        <div className="mt-8 border-t border-white/10 pt-5 text-center text-white/35 text-sm">
           © 2026 LumaPlay • Todos os direitos reservados
         </div>
       </div>
