@@ -84,7 +84,7 @@ export default function Plans() {
           <img
             src={plansOffer}
             alt="Plano Premium"
-            className="mt-8 w-full lg:max-w-3xl xl:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 lg:grid-cols-2">
@@ -105,6 +105,7 @@ export default function Plans() {
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="glow-button mt-8 flex justify-center rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-8 py-5 font-semibold"
               >
                 Assinar agora

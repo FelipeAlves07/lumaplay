@@ -8,28 +8,26 @@ const WHATSAPP_URL =
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
 
-  const closeMenu = () => setOpen(false);
-
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
         type="button"
-        className="md:hidden rounded-xl border border-white/10 bg-white/5 p-3 z-[100000] relative"
+        onClick={() => setOpen(true)}
+        className="md:hidden relative z-[999999] rounded-xl border border-white/10 bg-white/5 p-3"
       >
         <Menu className="h-6 w-6 text-white" />
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-[999999] bg-[#04050A] overflow-y-auto">
-          <div className="flex items-center justify-between px-5 py-5 border-b border-white/10">
-            <p className="text-lg font-semibold tracking-[0.2em] text-white">
+        <div className="fixed inset-0 z-[9999999] bg-[#04050A]">
+          <div className="flex items-center justify-between border-b border-white/10 px-5 py-5">
+            <h2 className="text-white text-xl font-semibold tracking-[0.2em]">
               LUMAPLAY
-            </p>
+            </h2>
 
             <button
-              onClick={closeMenu}
               type="button"
+              onClick={() => setOpen(false)}
               className="rounded-xl border border-white/10 bg-white/5 p-3"
             >
               <X className="h-6 w-6 text-white" />
@@ -39,48 +37,48 @@ export default function MobileMenu() {
           <div className="flex flex-col gap-6 px-6 py-8">
             <Link
               to="/conheca"
-              onClick={closeMenu}
-              className="text-2xl text-white"
+              onClick={() => setOpen(false)}
+              className="text-white text-2xl"
             >
               Conheça
             </Link>
 
             <Link
               to="/planos"
-              onClick={closeMenu}
-              className="text-2xl text-white"
+              onClick={() => setOpen(false)}
+              className="text-white text-2xl"
             >
               Planos
             </Link>
 
             <Link
               to="/beneficios"
-              onClick={closeMenu}
-              className="text-2xl text-white"
+              onClick={() => setOpen(false)}
+              className="text-white text-2xl"
             >
               Benefícios
             </Link>
 
             <Link
               to="/avaliacoes"
-              onClick={closeMenu}
-              className="text-2xl text-white"
+              onClick={() => setOpen(false)}
+              className="text-white text-2xl"
             >
               Avaliações
             </Link>
 
             <Link
               to="/faq"
-              onClick={closeMenu}
-              className="text-2xl text-white"
+              onClick={() => setOpen(false)}
+              className="text-white text-2xl"
             >
               FAQ
             </Link>
 
             <Link
               to="/contato"
-              onClick={closeMenu}
-              className="text-2xl text-white"
+              onClick={() => setOpen(false)}
+              className="text-white text-2xl"
             >
               Contato
             </Link>

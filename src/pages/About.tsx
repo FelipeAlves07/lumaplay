@@ -78,20 +78,8 @@ export default function About() {
             <a
               href={WHATSAPP_URL}
               target="_blank"
-              className="
-                glow-button
-                mt-8
-                inline-flex
-                items-center
-                gap-3
-                rounded-2xl
-                bg-gradient-to-r
-                from-[#157BFF]
-                to-[#8E35FF]
-                px-8
-                py-5
-                font-semibold
-              "
+              rel="noopener noreferrer"
+              className="glow-button mt-8 inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-8 py-5 font-semibold"
             >
               Assinar agora
               <ArrowRight className="h-5 w-5" />
@@ -103,18 +91,14 @@ export default function About() {
             animate={{ opacity: 1, scale: 1 }}
             src={aboutLifestyle}
             alt="Experiência premium"
-            className="w-full lg:max-w-xl xl:max-w-2xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="w-full max-w-[320px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[620px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
 
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl">
             <Zap className="h-8 w-8 text-cyan-300" />
-
-            <h3 className="mt-5 text-2xl font-semibold">
-              Ativação rápida
-            </h3>
-
+            <h3 className="mt-5 text-2xl font-semibold">Ativação rápida</h3>
             <p className="mt-4 text-white/55 leading-7">
               Comece sua experiência premium em poucos minutos.
             </p>
@@ -122,11 +106,7 @@ export default function About() {
 
           <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl">
             <ShieldCheck className="h-8 w-8 text-cyan-300" />
-
-            <h3 className="mt-5 text-2xl font-semibold">
-              Experiência confiável
-            </h3>
-
+            <h3 className="mt-5 text-2xl font-semibold">Experiência confiável</h3>
             <p className="mt-4 text-white/55 leading-7">
               Plataforma organizada, moderna e prática.
             </p>
@@ -134,11 +114,7 @@ export default function About() {
 
           <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl">
             <Headphones className="h-8 w-8 text-cyan-300" />
-
-            <h3 className="mt-5 text-2xl font-semibold">
-              Suporte humano
-            </h3>
-
+            <h3 className="mt-5 text-2xl font-semibold">Suporte humano</h3>
             <p className="mt-4 text-white/55 leading-7">
               Atendimento real quando precisar.
             </p>

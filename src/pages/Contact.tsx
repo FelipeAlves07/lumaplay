@@ -77,13 +77,14 @@ export default function Contact() {
           <img
             src={humanSupport}
             alt="Suporte humano"
-            className="mt-8 w-full lg:max-w-3xl xl:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             <a
               href={WHATSAPP_URL}
               target="_blank"
+              rel="noopener noreferrer"
               className="hover-card rounded-3xl border border-white/10 bg-gradient-to-r from-[#157BFF] to-[#8E35FF] p-8 md:p-10"
             >
               <MessageCircle className="h-10 w-10" />
@@ -100,6 +101,7 @@ export default function Contact() {
             <a
               href={INSTAGRAM_URL}
               target="_blank"
+              rel="noopener noreferrer"
               className="hover-card rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 backdrop-blur-xl"
             >
               <FaInstagram className="h-10 w-10 text-pink-400" />
@@ -129,7 +131,7 @@ export default function Contact() {
           <img
             src={ctaFinal}
             alt="CTA"
-            className="mt-8 w-full lg:max-w-3xl xl:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
       </section>

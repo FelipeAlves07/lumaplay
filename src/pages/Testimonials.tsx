@@ -107,7 +107,7 @@ export default function Testimonials() {
           <img
             src={socialProof}
             alt="Avaliações"
-            className="mt-8 w-full lg:max-w-3xl xl:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full max-w-[340px] md:max-w-[520px] lg:max-w-[700px] xl:max-w-[820px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

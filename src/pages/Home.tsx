@@ -88,6 +88,7 @@ export default function Home() {
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="glow-button flex items-center justify-center rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-8 py-5 font-semibold"
               >
                 Assinar agora
@@ -139,7 +140,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             src={heroPremium}
             alt="LumaPlay Premium"
-            className="w-full lg:max-w-2xl xl:max-w-3xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="w-full max-w-[320px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[620px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
       </section>
