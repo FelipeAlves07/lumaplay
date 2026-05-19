@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  Play,
-  CheckCircle2,
-  ShieldCheck,
-  Smartphone,
-} from "lucide-react";
+import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
@@ -35,7 +30,11 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/90 backdrop-blur-2xl">
         <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 md:px-8 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoIcon} alt="LumaPlay" className="h-10 w-10 rounded-2xl" />
+            <img
+              src={logoIcon}
+              alt="LumaPlay"
+              className="h-10 w-10 rounded-2xl"
+            />
 
             <div>
               <p className="text-sm font-semibold tracking-[0.24em]">LUMAPLAY</p>
@@ -74,7 +73,8 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 text-white/60 leading-8 max-w-xl">
-              Filmes, séries, canais ao vivo e futebol com experiência premium.
+              Filmes, séries, canais ao vivo e futebol com experiência premium,
+              suporte humano e ativação simplificada.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4">
