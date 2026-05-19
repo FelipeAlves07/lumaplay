@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Zap,
+  ShieldCheck,
+  Headphones,
+  Tv,
+  Smartphone,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
@@ -16,13 +23,26 @@ const WHATSAPP_URL =
 export default function About() {
   return (
     <main className="min-h-screen bg-[#04050A] text-white relative overflow-hidden">
+      <div className="fixed inset-0 -z-10">
+        <motion.div
+          animate={{ opacity: [0.35, 0.75, 0.35] }}
+          transition={{ duration: 6, repeat: Infinity }}
+          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(0,92,255,0.18),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(110,0,255,0.18),transparent_35%)]"
+        />
+      </div>
+
       <LiveActivity />
       <FloatingCTA />
 
       <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/90 backdrop-blur-2xl">
         <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 md:px-8 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoIcon} alt="LumaPlay" className="h-10 w-10 rounded-2xl" />
+            <img
+              src={logoIcon}
+              alt="LumaPlay"
+              className="h-10 w-10 rounded-2xl"
+            />
+
             <div>
               <p className="text-sm font-semibold tracking-[0.24em]">LUMAPLAY</p>
               <p className="text-[10px] uppercase text-white/35">BY LUMALABS</p>
@@ -46,11 +66,21 @@ export default function About() {
         <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-8 items-start">
           <div>
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-              Muito mais que streaming
+              Muito mais que
+              <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
+                {" "}streaming
+              </span>
             </h1>
 
-            <p className="mt-5 text-white/60 leading-7 max-w-xl">
-              A LumaPlay entrega entretenimento premium.
+            <p className="mt-5 text-white/65 leading-8 max-w-xl">
+              A LumaPlay foi criada para quem quer entretenimento premium sem
+              complicação. Nada de processos confusos, suporte inexistente ou
+              experiência amadora.
+            </p>
+
+            <p className="mt-4 text-white/50 leading-8 max-w-xl">
+              Aqui você encontra filmes, séries, canais ao vivo, futebol e uma
+              experiência moderna com ativação rápida e suporte humano real.
             </p>
 
             <a
@@ -62,6 +92,50 @@ export default function About() {
               Assinar agora
               <ArrowRight className="h-5 w-5" />
             </a>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <Zap className="h-6 w-6 text-cyan-300" />
+                <h3 className="mt-4 font-semibold">Ativação rápida</h3>
+                <p className="mt-2 text-sm text-white/50">
+                  Processo simples e objetivo.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <ShieldCheck className="h-6 w-6 text-cyan-300" />
+                <h3 className="mt-4 font-semibold">Experiência premium</h3>
+                <p className="mt-2 text-sm text-white/50">
+                  Interface moderna e conteúdo completo.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <Headphones className="h-6 w-6 text-cyan-300" />
+                <h3 className="mt-4 font-semibold">Suporte humano</h3>
+                <p className="mt-2 text-sm text-white/50">
+                  Atendimento real quando precisar.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <Tv className="h-6 w-6 text-cyan-300" />
+                <h3 className="mt-4 font-semibold">Na sua TV</h3>
+                <p className="mt-2 text-sm text-white/50 leading-6">
+                  Aproveite a experiência em Smart TVs com conforto e qualidade.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <Smartphone className="h-6 w-6 text-cyan-300" />
+                <h3 className="mt-4 font-semibold">No celular também</h3>
+                <p className="mt-2 text-sm text-white/50 leading-6">
+                  Leve seu entretenimento com você onde estiver.
+                </p>
+              </div>
+            </div>
           </div>
 
           <motion.img

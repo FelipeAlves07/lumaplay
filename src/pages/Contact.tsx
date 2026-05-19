@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import {
   MessageCircle,
   Headphones,
+  ShieldCheck,
+  Clock3,
+  Smartphone,
 } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -72,8 +75,14 @@ export default function Contact() {
               </span>
             </h1>
 
-            <p className="mt-5 text-white/60 leading-7 max-w-xl">
-              Atendimento humano rápido para assinatura, suporte e dúvidas.
+            <p className="mt-5 text-white/65 leading-8 max-w-xl">
+              Está pronto para começar sua experiência premium?
+              Nossa equipe está disponível para te orientar de forma rápida e simples.
+            </p>
+
+            <p className="mt-4 text-white/50 leading-8 max-w-xl">
+              Tire dúvidas, receba atendimento humano real, conheça o processo
+              de ativação e fale diretamente com quem pode te ajudar.
             </p>
 
             <div className="mt-7 grid gap-4 sm:grid-cols-2">
@@ -90,7 +99,7 @@ export default function Contact() {
                 </h2>
 
                 <p className="mt-2 text-sm text-white/85 leading-6">
-                  Atendimento rápido.
+                  Atendimento rápido e direto para assinatura.
                 </p>
               </a>
 
@@ -107,21 +116,45 @@ export default function Contact() {
                 </h2>
 
                 <p className="mt-2 text-sm text-white/60 leading-6">
-                  Novidades e promoções.
+                  Novidades, conteúdos e atualizações.
                 </p>
               </a>
             </div>
 
-            <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
-              <Headphones className="mx-auto h-8 w-8 text-cyan-300" />
+            <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <Headphones className="h-7 w-7 text-cyan-300" />
+                  <h3 className="mt-3 text-lg font-semibold">Suporte humano</h3>
+                  <p className="mt-2 text-sm text-white/55 leading-6">
+                    Nada de atendimento robótico sem solução.
+                  </p>
+                </div>
 
-              <h3 className="mt-4 text-xl font-semibold">
-                Suporte real
-              </h3>
+                <div>
+                  <Clock3 className="h-7 w-7 text-cyan-300" />
+                  <h3 className="mt-3 text-lg font-semibold">Ativação rápida</h3>
+                  <p className="mt-2 text-sm text-white/55 leading-6">
+                    Processo simples e objetivo.
+                  </p>
+                </div>
 
-              <p className="mt-2 text-sm text-white/60">
-                Atendimento humano de verdade.
-              </p>
+                <div>
+                  <ShieldCheck className="h-7 w-7 text-cyan-300" />
+                  <h3 className="mt-3 text-lg font-semibold">Experiência premium</h3>
+                  <p className="mt-2 text-sm text-white/55 leading-6">
+                    Atendimento alinhado com a proposta da plataforma.
+                  </p>
+                </div>
+
+                <div>
+                  <Smartphone className="h-7 w-7 text-cyan-300" />
+                  <h3 className="mt-3 text-lg font-semibold">Multi dispositivos</h3>
+                  <p className="mt-2 text-sm text-white/55 leading-6">
+                    Assista onde quiser com praticidade.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
