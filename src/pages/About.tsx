@@ -103,7 +103,7 @@ export default function About() {
             animate={{ opacity: 1, scale: 1 }}
             src={aboutLifestyle}
             alt="Experiência premium"
-            className="w-full md:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="w-full lg:max-w-xl xl:max-w-2xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
 

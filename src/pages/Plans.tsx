@@ -84,7 +84,7 @@ export default function Plans() {
           <img
             src={plansOffer}
             alt="Plano Premium"
-            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full lg:max-w-3xl xl:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 lg:grid-cols-2">

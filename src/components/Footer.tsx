@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Globe, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 
 const WHATSAPP_URL =
   "https://wa.me/5531975672291?text=Olá! Quero assinar a LumaPlay.";
@@ -12,7 +13,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1600px] px-4 md:px-8 py-10">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <h3 className="text-2xl font-semibold">LUMAPLAY</h3>
+            <h3 className="text-2xl font-semibold text-white">LUMAPLAY</h3>
 
             <p className="mt-4 text-white/50 leading-7">
               Streaming premium com suporte humano e ativação rápida.
@@ -20,7 +21,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Navegação</h4>
+            <h4 className="font-semibold mb-4 text-white">Navegação</h4>
 
             <div className="flex flex-col gap-3 text-white/60">
               <Link to="/conheca">Conheça</Link>
@@ -33,15 +34,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contato</h4>
+            <h4 className="font-semibold mb-4 text-white">Contato</h4>
 
-            <div className="flex gap-4">
+            <div className="flex gap-5">
               <a href={WHATSAPP_URL} target="_blank">
-                <MessageCircle className="h-6 w-6 text-green-400" />
+                <MessageCircle className="h-7 w-7 text-green-400" />
               </a>
 
               <a href={INSTAGRAM_URL} target="_blank">
-                <Globe className="h-6 w-6 text-pink-400" />
+                <FaInstagram className="h-7 w-7 text-pink-400" />
               </a>
             </div>
           </div>

@@ -139,7 +139,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             src={heroPremium}
             alt="LumaPlay Premium"
-            className="w-full md:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="w-full lg:max-w-2xl xl:max-w-3xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
       </section>

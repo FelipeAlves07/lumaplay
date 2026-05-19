@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import {
   MessageCircle,
   Headphones,
-  Globe,
 } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
@@ -77,7 +77,7 @@ export default function Contact() {
           <img
             src={humanSupport}
             alt="Suporte humano"
-            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full lg:max-w-3xl xl:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -102,7 +102,7 @@ export default function Contact() {
               target="_blank"
               className="hover-card rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 backdrop-blur-xl"
             >
-              <Globe className="h-10 w-10 text-pink-400" />
+              <FaInstagram className="h-10 w-10 text-pink-400" />
 
               <h2 className="mt-6 text-2xl md:text-3xl font-semibold">
                 Instagram
@@ -129,7 +129,7 @@ export default function Contact() {
           <img
             src={ctaFinal}
             alt="CTA"
-            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full lg:max-w-3xl xl:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
       </section>
