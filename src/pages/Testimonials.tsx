@@ -7,6 +7,7 @@ import socialProof from "../assets/images/social-proof.webp";
 
 import LiveActivity from "../components/LiveActivity";
 import FloatingCTA from "../components/FloatingCTA";
+import MobileMenu from "../components/MobileMenu";
 
 export default function Testimonials() {
   const reviews = [
@@ -18,7 +19,7 @@ export default function Testimonials() {
     {
       name: "Fernanda R.",
       city: "Contagem",
-      text: "Muito mais organizado do que eu imaginava. Atendimento rápido demais.",
+      text: "Muito mais organizado do que eu imaginava.",
     },
     {
       name: "Juliano P.",
@@ -28,32 +29,17 @@ export default function Testimonials() {
     {
       name: "Patrícia A.",
       city: "Nova Lima",
-      text: "Assinei no mesmo dia e já estava usando em minutos.",
+      text: "Assinei e já estava usando em minutos.",
     },
     {
       name: "Rafael S.",
       city: "Uberlândia",
-      text: "Suporte realmente responde. Isso me passou confiança.",
+      text: "Suporte realmente responde.",
     },
     {
       name: "Marina C.",
       city: "Juiz de Fora",
-      text: "Visual premium e atendimento muito bom.",
-    },
-    {
-      name: "Camila B.",
-      city: "Campinas",
-      text: "Tudo muito simples e organizado.",
-    },
-    {
-      name: "Eduardo L.",
-      city: "Curitiba",
-      text: "Melhor do que eu esperava sinceramente.",
-    },
-    {
-      name: "Amanda T.",
-      city: "Recife",
-      text: "Funcionou rápido e sem dor de cabeça.",
+      text: "Experiência premium de verdade.",
     },
   ];
 
@@ -63,7 +49,7 @@ export default function Testimonials() {
         <motion.div
           animate={{ opacity: [0.35, 0.75, 0.35] }}
           transition={{ duration: 6, repeat: Infinity }}
-          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(0,92,255,0.22),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(110,0,255,0.22),transparent_35%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(0,92,255,0.18),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(110,0,255,0.18),transparent_35%)]"
         />
       </div>
 
@@ -71,56 +57,75 @@ export default function Testimonials() {
       <FloatingCTA />
 
       <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/80 backdrop-blur-2xl">
-        <div className="mx-auto max-w-7xl px-5 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-5 py-4">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={logoIcon}
               alt="LumaPlay"
-              className="h-12 w-12 rounded-2xl"
+              className="h-10 w-10 md:h-12 md:w-12 rounded-2xl"
             />
 
             <div>
-              <p className="font-semibold tracking-[0.24em]">LUMAPLAY</p>
+              <p className="text-sm font-semibold tracking-[0.24em]">
+                LUMAPLAY
+              </p>
               <p className="text-[10px] uppercase text-white/35">
                 by Luma Labs
               </p>
             </div>
           </Link>
+
+          <nav className="hidden md:flex gap-7 text-white/60">
+            <Link to="/conheca">Conheça</Link>
+            <Link to="/planos">Planos</Link>
+            <Link to="/beneficios">Benefícios</Link>
+            <Link to="/avaliacoes">Avaliações</Link>
+            <Link to="/faq">FAQ</Link>
+            <Link to="/contato">Contato</Link>
+          </nav>
+
+          <MobileMenu />
         </div>
       </header>
 
-      <section className="mx-auto max-w-7xl px-5 py-20">
+      <section className="mx-auto max-w-7xl px-4 md:px-5 py-10 md:py-20">
         <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-semibold">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
             Clientes satisfeitos com a
             <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
               {" "}LumaPlay
             </span>
           </h1>
 
-          <p className="mt-6 text-xl text-white/60 max-w-3xl mx-auto leading-9">
-            Pessoas reais aproveitando a experiência premium da LumaPlay.
+          <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
+            Experiências reais de clientes aproveitando a plataforma.
           </p>
         </div>
 
         <motion.img
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
           src={socialProof}
-          alt="Clientes satisfeitos"
-          className="mt-14 rounded-3xl border border-white/10 shadow-2xl"
+          alt="Avaliações"
+          className="mt-10 w-full rounded-3xl border border-white/10 shadow-2xl"
         />
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((review, index) => (
             <motion.div
               key={review.name}
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="hover-card rounded-3xl border border-white/8 bg-white/5 p-8 backdrop-blur-xl"
+              className="
+                hover-card
+                rounded-3xl
+                border border-white/10
+                bg-white/5
+                p-6 md:p-8
+                backdrop-blur-xl
+              "
             >
               <div className="mb-5 flex gap-1 text-yellow-400">
                 {[...Array(5)].map((_, i) => (

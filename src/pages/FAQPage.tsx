@@ -1,39 +1,119 @@
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
 import faqSupport from "../assets/images/faq-support.webp";
 
+import FloatingCTA from "../components/FloatingCTA";
+import LiveActivity from "../components/LiveActivity";
+import MobileMenu from "../components/MobileMenu";
+
 export default function FAQPage() {
+  const faqs = [
+    {
+      q: "Funciona na Smart TV?",
+      a: "Sim. Compatível com Smart TVs, TV Box e outros dispositivos.",
+    },
+    {
+      q: "Funciona no celular?",
+      a: "Sim. Você pode acessar pelo celular e tablet sem complicação.",
+    },
+    {
+      q: "É difícil instalar?",
+      a: "Não. A ativação é rápida e nosso suporte ajuda se necessário.",
+    },
+    {
+      q: "Tem suporte humano?",
+      a: "Sim. Atendimento real para ajudar no que precisar.",
+    },
+    {
+      q: "Quanto tempo leva para ativar?",
+      a: "Normalmente poucos minutos após confirmação.",
+    },
+  ];
+
   return (
-    <main className="min-h-screen bg-[#04050A] text-white">
+    <main className="min-h-screen bg-[#04050A] text-white relative overflow-hidden">
+      <div className="fixed inset-0 -z-10">
+        <motion.div
+          animate={{ opacity: [0.35, 0.75, 0.35] }}
+          transition={{ duration: 6, repeat: Infinity }}
+          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(0,92,255,0.18),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(110,0,255,0.18),transparent_35%)]"
+        />
+      </div>
+
+      <LiveActivity />
+      <FloatingCTA />
+
       <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/80 backdrop-blur-2xl">
-        <div className="mx-auto max-w-7xl px-5 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-5 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoIcon} className="h-12 w-12 rounded-2xl" />
-            <p className="font-semibold tracking-[0.24em]">LUMAPLAY</p>
+            <img
+              src={logoIcon}
+              alt="LumaPlay"
+              className="h-10 w-10 md:h-12 md:w-12 rounded-2xl"
+            />
+
+            <div>
+              <p className="text-sm font-semibold tracking-[0.24em]">
+                LUMAPLAY
+              </p>
+              <p className="text-[10px] uppercase text-white/35">
+                by Luma Labs
+              </p>
+            </div>
           </Link>
+
+          <nav className="hidden md:flex gap-7 text-white/60">
+            <Link to="/conheca">Conheça</Link>
+            <Link to="/planos">Planos</Link>
+            <Link to="/beneficios">Benefícios</Link>
+            <Link to="/avaliacoes">Avaliações</Link>
+            <Link to="/faq">FAQ</Link>
+            <Link to="/contato">Contato</Link>
+          </nav>
+
+          <MobileMenu />
         </div>
       </header>
 
-      <section className="mx-auto max-w-7xl px-5 py-20">
-        <h1 className="text-center text-5xl font-semibold">Dúvidas frequentes</h1>
+      <section className="mx-auto max-w-7xl px-4 md:px-5 py-10 md:py-20">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
+            Dúvidas frequentes
+          </h1>
 
-        <img
+          <p className="mt-6 text-base md:text-xl text-white/60 max-w-3xl mx-auto leading-8">
+            Respostas rápidas para as dúvidas mais comuns.
+          </p>
+        </div>
+
+        <motion.img
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
           src={faqSupport}
-          className="mt-12 rounded-3xl border border-white/10"
+          alt="FAQ"
+          className="mt-10 w-full rounded-3xl border border-white/10 shadow-2xl"
         />
 
-        <div className="mt-16 space-y-6 max-w-4xl mx-auto">
-          {[
-            ["Funciona na Smart TV?", "Sim."],
-            ["Funciona no celular?", "Sim."],
-            ["Tem suporte?", "Sim, suporte humano."],
-            ["É difícil instalar?", "Não, ativação simplificada."],
-            ["Como assino?", "WhatsApp ou Instagram."],
-          ].map(([q, a]) => (
-            <div className="rounded-3xl bg-white/5 p-8">
-              <h3 className="text-xl font-semibold">{q}</h3>
-              <p className="mt-4 text-white/60">{a}</p>
+        <div className="mt-10 max-w-5xl mx-auto space-y-5">
+          {faqs.map((faq) => (
+            <div
+              key={faq.q}
+              className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl"
+            >
+              <div className="flex items-center justify-between gap-4">
+                <h3 className="text-lg md:text-2xl font-semibold">
+                  {faq.q}
+                </h3>
+
+                <ChevronDown className="h-5 w-5 text-cyan-300 shrink-0" />
+              </div>
+
+              <p className="mt-5 text-white/60 leading-8">
+                {faq.a}
+              </p>
             </div>
           ))}
         </div>
