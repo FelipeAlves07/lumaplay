@@ -33,7 +33,7 @@ export default function About() {
             <img
               src={logoIcon}
               alt="LumaPlay"
-              className="h-10 w-10 md:h-12 md:w-12 rounded-2xl"
+              className="h-10 w-10 rounded-2xl"
             />
 
             <div>
@@ -55,70 +55,61 @@ export default function About() {
         </div>
       </header>
 
-      <section className="w-full px-4 md:px-8 py-8 md:py-20">
-        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
+      <section className="w-full px-4 md:px-8 py-6 md:py-12">
+        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-8 items-center">
+          
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
+            <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
               Muito mais que
               <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
                 {" "}streaming
               </span>
             </h1>
 
-            <p className="mt-6 text-base md:text-xl text-white/60 leading-8 md:leading-9">
+            <p className="mt-5 text-white/60 leading-7 max-w-xl">
               A LumaPlay entrega entretenimento premium com praticidade,
               suporte humano e experiência moderna.
             </p>
 
-            <p className="mt-5 text-white/50 leading-8">
-              Filmes, séries, canais ao vivo e futebol por apenas R$29,90 por mês,
-              com ativação rápida e atendimento real.
+            <p className="mt-4 text-white/50 leading-7 max-w-xl">
+              Filmes, séries, canais ao vivo e futebol por apenas R$29,90 por mês.
             </p>
 
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="glow-button mt-8 inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-8 py-5 font-semibold"
+              className="glow-button mt-7 inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-7 py-4 font-semibold"
             >
               Assinar agora
               <ArrowRight className="h-5 w-5" />
             </a>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <Zap className="h-6 w-6 text-cyan-300" />
+                <h3 className="mt-4 font-semibold">Ativação rápida</h3>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <ShieldCheck className="h-6 w-6 text-cyan-300" />
+                <h3 className="mt-4 font-semibold">Confiável</h3>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <Headphones className="h-6 w-6 text-cyan-300" />
+                <h3 className="mt-4 font-semibold">Suporte</h3>
+              </div>
+            </div>
           </div>
 
           <motion.img
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             src={aboutLifestyle}
-            alt="Experiência premium"
-            className="w-full max-w-[320px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[620px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            alt="Sobre"
+            className="w-full max-w-[400px] lg:max-w-[580px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
-        </div>
-
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
-          <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl">
-            <Zap className="h-8 w-8 text-cyan-300" />
-            <h3 className="mt-5 text-2xl font-semibold">Ativação rápida</h3>
-            <p className="mt-4 text-white/55 leading-7">
-              Comece sua experiência premium em poucos minutos.
-            </p>
-          </div>
-
-          <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl">
-            <ShieldCheck className="h-8 w-8 text-cyan-300" />
-            <h3 className="mt-5 text-2xl font-semibold">Experiência confiável</h3>
-            <p className="mt-4 text-white/55 leading-7">
-              Plataforma organizada, moderna e prática.
-            </p>
-          </div>
-
-          <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl">
-            <Headphones className="h-8 w-8 text-cyan-300" />
-            <h3 className="mt-5 text-2xl font-semibold">Suporte humano</h3>
-            <p className="mt-4 text-white/55 leading-7">
-              Atendimento real quando precisar.
-            </p>
-          </div>
         </div>
       </section>
 

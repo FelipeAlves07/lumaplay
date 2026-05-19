@@ -39,7 +39,7 @@ export default function Contact() {
             <img
               src={logoIcon}
               alt="LumaPlay"
-              className="h-10 w-10 md:h-12 md:w-12 rounded-2xl"
+              className="h-10 w-10 rounded-2xl"
             />
 
             <div>
@@ -61,36 +61,36 @@ export default function Contact() {
         </div>
       </header>
 
-      <section className="w-full px-4 md:px-8 py-8 md:py-20">
-        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-10 md:gap-14 items-center">
+      <section className="w-full px-4 md:px-8 py-6 md:py-12">
+        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-8 items-center">
           
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight">
+            <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
               Fale com nossa
               <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
                 {" "}Equipe
               </span>
             </h1>
 
-            <p className="mt-6 text-base md:text-xl text-white/60 leading-8">
+            <p className="mt-5 text-white/60 leading-7 max-w-xl">
               Atendimento humano rápido para assinatura, suporte e dúvidas.
             </p>
 
-            <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            <div className="mt-7 grid gap-4 sm:grid-cols-2">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover-card rounded-3xl border border-white/10 bg-gradient-to-r from-[#157BFF] to-[#8E35FF] p-8"
+                className="rounded-2xl border border-white/10 bg-gradient-to-r from-[#157BFF] to-[#8E35FF] p-6"
               >
-                <MessageCircle className="h-10 w-10" />
+                <MessageCircle className="h-8 w-8" />
 
-                <h2 className="mt-6 text-2xl font-semibold">
+                <h2 className="mt-4 text-xl font-semibold">
                   WhatsApp
                 </h2>
 
-                <p className="mt-4 text-white/85 leading-7">
-                  Atendimento rápido para assinatura.
+                <p className="mt-2 text-sm text-white/85 leading-6">
+                  Atendimento rápido.
                 </p>
               </a>
 
@@ -98,28 +98,28 @@ export default function Contact() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover-card rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
+                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
               >
-                <FaInstagram className="h-10 w-10 text-pink-400" />
+                <FaInstagram className="h-8 w-8 text-pink-400" />
 
-                <h2 className="mt-6 text-2xl font-semibold">
+                <h2 className="mt-4 text-xl font-semibold">
                   Instagram
                 </h2>
 
-                <p className="mt-4 text-white/60 leading-7">
+                <p className="mt-2 text-sm text-white/60 leading-6">
                   Novidades e promoções.
                 </p>
               </a>
             </div>
 
-            <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-xl">
-              <Headphones className="mx-auto h-10 w-10 text-cyan-300" />
+            <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
+              <Headphones className="mx-auto h-8 w-8 text-cyan-300" />
 
-              <h3 className="mt-6 text-2xl font-semibold">
+              <h3 className="mt-4 text-xl font-semibold">
                 Suporte real
               </h3>
 
-              <p className="mt-4 text-white/60 leading-7">
+              <p className="mt-2 text-sm text-white/60">
                 Atendimento humano de verdade.
               </p>
             </div>
@@ -130,7 +130,7 @@ export default function Contact() {
             animate={{ opacity: 1, scale: 1 }}
             src={humanSupport}
             alt="Contato"
-            className="w-full max-w-[340px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[620px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
+            className="w-full max-w-[380px] lg:max-w-[560px] mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
       </section>
