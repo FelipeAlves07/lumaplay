@@ -10,12 +10,6 @@
   box-sizing: border-box;
 }
 
-*,
-button,
-a {
-  cursor: pointer;
-}
-
 html,
 body,
 #root {
@@ -28,6 +22,7 @@ body,
 
 body {
   overflow-x: hidden;
+  cursor: default;
 }
 
 img {
@@ -36,7 +31,17 @@ img {
   height: auto;
 }
 
-/* AJUSTE GLOBAL SEM QUEBRAR TAILWIND */
+/* CURSORES CORRETOS */
+
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+/* ANIMAÇÕES */
 
 .floating-cta {
   animation: pulseGlow 2.2s infinite;
@@ -110,28 +115,6 @@ nav a:hover::after {
   border-radius: 999px;
 }
 
-/* REDUÇÃO VISUAL CONTROLADA */
-
-@media (min-width: 1024px) {
-  h1 {
-    font-size: clamp(3.2rem, 4.6vw, 5.6rem) !important;
-    line-height: 1.04 !important;
-  }
-
-  h2 {
-    font-size: clamp(1.8rem, 2.4vw, 2.7rem) !important;
-  }
-
-  h3 {
-    font-size: clamp(1.2rem, 1.5vw, 1.8rem) !important;
-  }
-
-  section {
-    padding-top: 4rem !important;
-    padding-bottom: 4rem !important;
-  }
-}
-
 @media (max-width: 768px) {
   .floating-cta {
     bottom: 14px !important;
@@ -148,9 +131,5 @@ nav a:hover::after {
 
   nav a::after {
     display: none;
-  }
-
-  body {
-    overflow-x: hidden !important;
   }
 }
