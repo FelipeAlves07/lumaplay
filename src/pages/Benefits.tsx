@@ -16,6 +16,7 @@ import whyLumaplay from "../assets/images/why-lumaplay.webp";
 import FloatingCTA from "../components/FloatingCTA";
 import LiveActivity from "../components/LiveActivity";
 import MobileMenu from "../components/MobileMenu";
+import Footer from "../components/Footer";
 
 const WHATSAPP_URL =
   "https://wa.me/5531975672291?text=Olá! Quero assinar a LumaPlay.";
@@ -113,7 +114,7 @@ export default function Benefits() {
           <img
             src={whyLumaplay}
             alt="Por que escolher"
-            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -142,27 +143,22 @@ export default function Benefits() {
           <img
             src={multiDevice}
             alt="Multi dispositivos"
-            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 text-center">
             <a
               href={WHATSAPP_URL}
               target="_blank"
-              className="
-                glow-button
-                inline-flex
-                rounded-2xl
-                bg-gradient-to-r from-[#157BFF] to-[#8E35FF]
-                px-10 py-5
-                font-semibold
-              "
+              className="glow-button inline-flex rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-10 py-5 font-semibold"
             >
               Assinar por R$29,90
             </a>
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

@@ -8,6 +8,7 @@ import aboutLifestyle from "../assets/images/about-lifestyle.webp";
 import FloatingCTA from "../components/FloatingCTA";
 import LiveActivity from "../components/LiveActivity";
 import MobileMenu from "../components/MobileMenu";
+import Footer from "../components/Footer";
 
 const WHATSAPP_URL =
   "https://wa.me/5531975672291?text=Olá! Quero assinar a LumaPlay.";
@@ -84,8 +85,11 @@ export default function About() {
                 items-center
                 gap-3
                 rounded-2xl
-                bg-gradient-to-r from-[#157BFF] to-[#8E35FF]
-                px-8 py-5
+                bg-gradient-to-r
+                from-[#157BFF]
+                to-[#8E35FF]
+                px-8
+                py-5
                 font-semibold
               "
             >
@@ -99,7 +103,7 @@ export default function About() {
             animate={{ opacity: 1, scale: 1 }}
             src={aboutLifestyle}
             alt="Experiência premium"
-            className="w-full rounded-3xl border border-white/10 shadow-2xl"
+            className="w-full md:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
 
@@ -141,6 +145,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

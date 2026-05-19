@@ -8,6 +8,7 @@ import socialProof from "../assets/images/social-proof.webp";
 import LiveActivity from "../components/LiveActivity";
 import FloatingCTA from "../components/FloatingCTA";
 import MobileMenu from "../components/MobileMenu";
+import Footer from "../components/Footer";
 
 export default function Testimonials() {
   const reviews = [
@@ -66,8 +67,12 @@ export default function Testimonials() {
             />
 
             <div>
-              <p className="text-sm font-semibold tracking-[0.24em]">LUMAPLAY</p>
-              <p className="text-[10px] uppercase text-white/35">BY LUMALABS</p>
+              <p className="text-sm font-semibold tracking-[0.24em]">
+                LUMAPLAY
+              </p>
+              <p className="text-[10px] uppercase text-white/35">
+                BY LUMALABS
+              </p>
             </div>
           </Link>
 
@@ -102,7 +107,7 @@ export default function Testimonials() {
           <img
             src={socialProof}
             alt="Avaliações"
-            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -134,6 +139,8 @@ export default function Testimonials() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

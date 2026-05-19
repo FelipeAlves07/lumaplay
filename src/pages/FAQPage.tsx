@@ -8,6 +8,7 @@ import faqSupport from "../assets/images/faq-support.webp";
 import FloatingCTA from "../components/FloatingCTA";
 import LiveActivity from "../components/LiveActivity";
 import MobileMenu from "../components/MobileMenu";
+import Footer from "../components/Footer";
 
 export default function FAQPage() {
   const faqs = [
@@ -93,7 +94,7 @@ export default function FAQPage() {
           <img
             src={faqSupport}
             alt="FAQ"
-            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 max-w-5xl mx-auto space-y-5">
@@ -118,6 +119,8 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

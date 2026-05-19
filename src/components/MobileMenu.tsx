@@ -18,7 +18,7 @@ export default function MobileMenu() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-[99999] bg-[#04050A]">
+        <div className="fixed inset-0 z-[99999] bg-[#04050A] overflow-y-auto">
           <div className="flex items-center justify-between px-5 py-5 border-b border-white/10">
             <p className="text-lg font-semibold tracking-[0.2em]">
               LUMAPLAY
@@ -32,7 +32,7 @@ export default function MobileMenu() {
             </button>
           </div>
 
-          <div className="flex flex-col gap-5 px-5 py-8 text-lg">
+          <div className="flex flex-col gap-6 px-5 py-8 text-2xl">
             <Link to="/conheca" onClick={() => setOpen(false)}>
               Conheça
             </Link>
@@ -67,8 +67,9 @@ export default function MobileMenu() {
                 from-[#157BFF]
                 to-[#8E35FF]
                 px-6
-                py-4
+                py-5
                 text-center
+                text-lg
                 font-semibold
               "
             >

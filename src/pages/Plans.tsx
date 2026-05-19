@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
 import plansOffer from "../assets/images/plans-offer.webp";
+
 import FloatingCTA from "../components/FloatingCTA";
 import LiveActivity from "../components/LiveActivity";
 import MobileMenu from "../components/MobileMenu";
+import Footer from "../components/Footer";
 
 const WHATSAPP_URL =
   "https://wa.me/5531975672291?text=Olá! Quero assinar a LumaPlay agora.";
@@ -82,7 +84,7 @@ export default function Plans() {
           <img
             src={plansOffer}
             alt="Plano Premium"
-            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 lg:grid-cols-2">
@@ -103,16 +105,7 @@ export default function Plans() {
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
-                className="
-                  glow-button
-                  mt-8
-                  flex
-                  justify-center
-                  rounded-2xl
-                  bg-gradient-to-r from-[#157BFF] to-[#8E35FF]
-                  px-8 py-5
-                  font-semibold
-                "
+                className="glow-button mt-8 flex justify-center rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-8 py-5 font-semibold"
               >
                 Assinar agora
               </a>
@@ -138,29 +131,25 @@ export default function Plans() {
             <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
               <Zap className="mx-auto mb-4 h-8 w-8 text-cyan-300" />
               <h4 className="text-xl font-semibold">Ativação rápida</h4>
-              <p className="mt-3 text-white/50">
-                Comece em poucos minutos.
-              </p>
+              <p className="mt-3 text-white/50">Comece em poucos minutos.</p>
             </div>
 
             <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
               <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-cyan-300" />
               <h4 className="text-xl font-semibold">Pagamento seguro</h4>
-              <p className="mt-3 text-white/50">
-                Processo simples e confiável.
-              </p>
+              <p className="mt-3 text-white/50">Processo simples e confiável.</p>
             </div>
 
             <div className="hover-card rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
               <CheckCircle2 className="mx-auto mb-4 h-8 w-8 text-cyan-300" />
               <h4 className="text-xl font-semibold">Suporte real</h4>
-              <p className="mt-3 text-white/50">
-                Atendimento humano.
-              </p>
+              <p className="mt-3 text-white/50">Atendimento humano.</p>
             </div>
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

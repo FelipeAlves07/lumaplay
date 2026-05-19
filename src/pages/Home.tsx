@@ -15,6 +15,7 @@ import heroPremium from "../assets/images/hero-premium.webp";
 import LiveActivity from "../components/LiveActivity";
 import FloatingCTA from "../components/FloatingCTA";
 import MobileMenu from "../components/MobileMenu";
+import Footer from "../components/Footer";
 
 const WHATSAPP_URL =
   "https://wa.me/5531975672291?text=Olá! Quero assinar a LumaPlay agora.";
@@ -87,31 +88,14 @@ export default function Home() {
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
-                className="
-                  glow-button
-                  flex
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-gradient-to-r from-[#157BFF] to-[#8E35FF]
-                  px-8 py-5
-                  font-semibold
-                "
+                className="glow-button flex items-center justify-center rounded-2xl bg-gradient-to-r from-[#157BFF] to-[#8E35FF] px-8 py-5 font-semibold"
               >
                 Assinar agora
               </a>
 
               <Link
                 to="/planos"
-                className="
-                  rounded-2xl
-                  border
-                  border-white/10
-                  bg-white/5
-                  px-8 py-5
-                  text-center
-                  font-semibold
-                "
+                className="rounded-2xl border border-white/10 bg-white/5 px-8 py-5 text-center font-semibold"
               >
                 Ver planos
               </Link>
@@ -143,6 +127,7 @@ export default function Home() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-yellow-400" />
               ))}
+
               <span className="ml-2 text-white/60 text-sm">
                 Clientes satisfeitos em todo o Brasil
               </span>
@@ -154,10 +139,12 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             src={heroPremium}
             alt="LumaPlay Premium"
-            className="w-full rounded-3xl border border-white/10 shadow-2xl"
+            className="w-full md:max-w-4xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import { MessageCircle, Headphones, Globe } from "lucide-react";
+import {
+  MessageCircle,
+  Headphones,
+  Globe,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
@@ -9,6 +13,7 @@ import ctaFinal from "../assets/images/cta-final.webp";
 import FloatingCTA from "../components/FloatingCTA";
 import LiveActivity from "../components/LiveActivity";
 import MobileMenu from "../components/MobileMenu";
+import Footer from "../components/Footer";
 
 const WHATSAPP_URL =
   "https://wa.me/5531975672291?text=Olá! Quero assinar a LumaPlay.";
@@ -72,20 +77,14 @@ export default function Contact() {
           <img
             src={humanSupport}
             alt="Suporte humano"
-            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
 
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             <a
               href={WHATSAPP_URL}
               target="_blank"
-              className="
-                hover-card
-                rounded-3xl
-                border border-white/10
-                bg-gradient-to-r from-[#157BFF] to-[#8E35FF]
-                p-8 md:p-10
-              "
+              className="hover-card rounded-3xl border border-white/10 bg-gradient-to-r from-[#157BFF] to-[#8E35FF] p-8 md:p-10"
             >
               <MessageCircle className="h-10 w-10" />
 
@@ -101,23 +100,16 @@ export default function Contact() {
             <a
               href={INSTAGRAM_URL}
               target="_blank"
-              className="
-                hover-card
-                rounded-3xl
-                border border-white/10
-                bg-white/5
-                p-8 md:p-10
-                backdrop-blur-xl
-              "
+              className="hover-card rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 backdrop-blur-xl"
             >
-              <Globe className="h-10 w-10 text-cyan-300" />
+              <Globe className="h-10 w-10 text-pink-400" />
 
               <h2 className="mt-6 text-2xl md:text-3xl font-semibold">
                 Instagram
               </h2>
 
               <p className="mt-4 text-white/60 leading-7">
-                Acompanhe novidades, conteúdos e promoções da LumaPlay.
+                Acompanhe novidades, conteúdos e promoções.
               </p>
             </a>
           </div>
@@ -130,17 +122,19 @@ export default function Contact() {
             </h3>
 
             <p className="mt-4 text-white/60 max-w-2xl mx-auto leading-8">
-              Nada de respostas automáticas genéricas. Atendimento humano de verdade.
+              Atendimento humano de verdade.
             </p>
           </div>
 
           <img
             src={ctaFinal}
-            alt="Comece agora"
-            className="mt-8 w-full rounded-3xl border border-white/10 shadow-2xl"
+            alt="CTA"
+            className="mt-8 w-full md:max-w-5xl mx-auto rounded-3xl border border-white/10 shadow-2xl"
           />
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
