@@ -62,7 +62,7 @@ export default function Contact() {
       </header>
 
       <section className="w-full px-4 md:px-8 py-6 md:py-12">
-        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-8 items-center">
+        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-8 items-start">
           
           <div>
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight">

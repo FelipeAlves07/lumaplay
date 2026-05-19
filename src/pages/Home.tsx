@@ -35,11 +35,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/90 backdrop-blur-2xl">
         <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 md:px-8 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img
-              src={logoIcon}
-              alt="LumaPlay"
-              className="h-10 w-10 rounded-2xl"
-            />
+            <img src={logoIcon} alt="LumaPlay" className="h-10 w-10 rounded-2xl" />
 
             <div>
               <p className="text-sm font-semibold tracking-[0.24em]">LUMAPLAY</p>
@@ -61,8 +57,7 @@ export default function Home() {
       </header>
 
       <section className="w-full px-4 md:px-8 py-6 md:py-12">
-        <div className="mx-auto max-w-[1600px] grid lg:grid-cols-2 gap-8 items-center">
-          
+        <div className="mx-auto max-w-[1600px] grid lg:grid-cols-2 gap-8 items-start">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-4 py-2 text-xs">
               <Play className="h-4 w-4" />
@@ -79,8 +74,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 text-white/60 leading-8 max-w-xl">
-              Filmes, séries, canais ao vivo e futebol com experiência premium,
-              suporte humano e ativação simplificada.
+              Filmes, séries, canais ao vivo e futebol com experiência premium.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4">
@@ -99,23 +93,6 @@ export default function Home() {
               >
                 Ver planos
               </Link>
-            </div>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="hover-card rounded-2xl border border-white/10 bg-white/5 p-5">
-                <CheckCircle2 className="h-6 w-6 text-cyan-300" />
-                <p className="mt-4 text-white/75">Canais e filmes</p>
-              </div>
-
-              <div className="hover-card rounded-2xl border border-white/10 bg-white/5 p-5">
-                <ShieldCheck className="h-6 w-6 text-cyan-300" />
-                <p className="mt-4 text-white/75">Suporte humano</p>
-              </div>
-
-              <div className="hover-card rounded-2xl border border-white/10 bg-white/5 p-5 sm:col-span-2">
-                <Smartphone className="h-6 w-6 text-cyan-300" />
-                <p className="mt-4 text-white/75">Multi dispositivos</p>
-              </div>
             </div>
           </div>
 

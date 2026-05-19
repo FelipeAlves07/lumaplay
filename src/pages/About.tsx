@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Zap, Headphones } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
@@ -16,26 +16,13 @@ const WHATSAPP_URL =
 export default function About() {
   return (
     <main className="min-h-screen bg-[#04050A] text-white relative overflow-hidden">
-      <div className="fixed inset-0 -z-10">
-        <motion.div
-          animate={{ opacity: [0.35, 0.75, 0.35] }}
-          transition={{ duration: 6, repeat: Infinity }}
-          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(0,92,255,0.18),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(110,0,255,0.18),transparent_35%)]"
-        />
-      </div>
-
       <LiveActivity />
       <FloatingCTA />
 
       <header className="sticky top-0 z-50 border-b border-white/5 bg-[#04050A]/90 backdrop-blur-2xl">
         <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 md:px-8 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img
-              src={logoIcon}
-              alt="LumaPlay"
-              className="h-10 w-10 rounded-2xl"
-            />
-
+            <img src={logoIcon} alt="LumaPlay" className="h-10 w-10 rounded-2xl" />
             <div>
               <p className="text-sm font-semibold tracking-[0.24em]">LUMAPLAY</p>
               <p className="text-[10px] uppercase text-white/35">BY LUMALABS</p>
@@ -56,23 +43,14 @@ export default function About() {
       </header>
 
       <section className="w-full px-4 md:px-8 py-6 md:py-12">
-        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-8 items-center">
-          
+        <div className="mx-auto w-full max-w-[1600px] grid lg:grid-cols-2 gap-8 items-start">
           <div>
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-              Muito mais que
-              <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-500 bg-clip-text text-transparent">
-                {" "}streaming
-              </span>
+              Muito mais que streaming
             </h1>
 
             <p className="mt-5 text-white/60 leading-7 max-w-xl">
-              A LumaPlay entrega entretenimento premium com praticidade,
-              suporte humano e experiência moderna.
-            </p>
-
-            <p className="mt-4 text-white/50 leading-7 max-w-xl">
-              Filmes, séries, canais ao vivo e futebol por apenas R$29,90 por mês.
+              A LumaPlay entrega entretenimento premium.
             </p>
 
             <a
@@ -84,23 +62,6 @@ export default function About() {
               Assinar agora
               <ArrowRight className="h-5 w-5" />
             </a>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <Zap className="h-6 w-6 text-cyan-300" />
-                <h3 className="mt-4 font-semibold">Ativação rápida</h3>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <ShieldCheck className="h-6 w-6 text-cyan-300" />
-                <h3 className="mt-4 font-semibold">Confiável</h3>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <Headphones className="h-6 w-6 text-cyan-300" />
-                <h3 className="mt-4 font-semibold">Suporte</h3>
-              </div>
-            </div>
           </div>
 
           <motion.img
