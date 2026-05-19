@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MessageCircle, Instagram, Headphones } from "lucide-react";
+import { MessageCircle, Headphones, Camera } from "lucide-react";
 import { motion } from "framer-motion";
 
 import logoIcon from "../assets/logo-icon.png";
@@ -115,7 +115,7 @@ export default function Contact() {
               backdrop-blur-xl
             "
           >
-            <Instagram className="h-10 w-10 text-cyan-300" />
+            <Camera className="h-10 w-10 text-cyan-300" />
 
             <h2 className="mt-6 text-2xl md:text-3xl font-semibold">
               Instagram
