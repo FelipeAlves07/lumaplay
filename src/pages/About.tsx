@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, MessageCircle } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 import logoIcon from "../assets/logo-icon.png";
 import aboutLifestyle from "../assets/images/about-lifestyle.webp";
